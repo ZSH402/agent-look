@@ -1,0 +1,17 @@
+.secrets/
+__pycache__/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# 生成产物：论文插图（本地上传排除，可由 tools/make_shots.py 重新生成）
+article/shots/

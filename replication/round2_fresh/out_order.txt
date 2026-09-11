@@ -1,0 +1,15 @@
+A1 已撤销+已过期                                           expect=TOKEN_REVOKED      got=TOKEN_REVOKED      OK
+A2 只过期                                               expect=TOKEN_EXPIRED      got=TOKEN_EXPIRED      OK
+A3 只撤销                                               expect=TOKEN_REVOKED      got=TOKEN_REVOKED      OK
+B1 已过期+密钥作废                                          expect=TOKEN_EXPIRED      got=TOKEN_REVOKED      <<< DIFF
+B2 只密钥作废（未过期）                                        expect=TOKEN_INVALID      got=TOKEN_REVOKED      <<< DIFF
+C1 已撤销+密钥作废                                          expect=TOKEN_REVOKED      got=TOKEN_REVOKED      OK
+D1 已撤销+任务不匹配                                         expect=TOKEN_REVOKED      got=TOKEN_REVOKED      OK
+D2 已过期+范围越界                                          expect=TOKEN_EXPIRED      got=TOKEN_EXPIRED      OK
+D3 已撤销+范围越界                                          expect=TOKEN_REVOKED      got=TOKEN_REVOKED      OK
+E1 未知令牌                                              expect=TOKEN_INVALID      got=TOKEN_INVALID      OK
+E2 已撤销+未知令牌？(用真令牌)                                   expect=TOKEN_REVOKED      got=TOKEN_REVOKED      OK
+E3 C 持令牌但非签发者+已撤销                                    expect=TOKEN_INVALID      got=TOKEN_INVALID      OK
+F1 旧根令牌+已撤销（回滚 vs 撤销）                                expect=STALE_CREDENTIAL   got=STALE_CREDENTIAL   OK
+
+SUMMARY: 2 diff / 13

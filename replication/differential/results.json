@@ -1,0 +1,965 @@
+{
+  "F1a-matches": {
+    "cases": 3120,
+    "divergences": 0,
+    "detail": []
+  },
+  "F1b-subsumes": {
+    "cases": 6400,
+    "divergences": 0,
+    "detail": []
+  },
+  "F1c-system-matches": {
+    "cases": 240,
+    "divergences": 0,
+    "detail": []
+  },
+  "F1d-system-subsumes": {
+    "cases": 200,
+    "divergences": 0,
+    "detail": []
+  },
+  "F1e-soundness": {
+    "ref": {
+      "violations": 0,
+      "detail": []
+    },
+    "mine": {
+      "violations": 0,
+      "detail": []
+    },
+    "oracle": {
+      "violations": 0,
+      "detail": []
+    }
+  },
+  "F2-attenuation": {
+    "cases": 60,
+    "divergences": 0,
+    "detail": []
+  },
+  "F3-order": {
+    "cases": 50,
+    "divergences": 0,
+    "detail": []
+  },
+  "F4-replay": {
+    "cases": 79,
+    "divergences": 0,
+    "detail": []
+  },
+  "F5-revocation": {
+    "cases": 54,
+    "divergences": 0,
+    "detail": []
+  },
+  "F6-composite": {
+    "cases": 65,
+    "divergences": 0,
+    "detail": []
+  },
+  "F7-task": {
+    "cases": 44,
+    "divergences": 0,
+    "detail": []
+  },
+  "F8-empty-segment": {
+    "cases": 113,
+    "divergences": 0,
+    "detail": []
+  },
+  "F9-window": {
+    "cases": 78,
+    "divergences": 0,
+    "detail": []
+  },
+  "F10-refresh": {
+    "cases": 44,
+    "divergences": 0,
+    "detail": []
+  },
+  "F11-verify-order": {
+    "cases": 38,
+    "divergences": 1,
+    "detail": [
+      {
+        "case": "order-rev0-exp1-key1",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      }
+    ]
+  },
+  "F12-random-walk": {
+    "cases": 240,
+    "divergences": 4,
+    "detail": [
+      {
+        "case": "walk-59",
+        "diff": {
+          "24": [
+            "DENY/NOT_REDELEGATABLE",
+            "DENY/SCOPE_VIOLATION"
+          ]
+        },
+        "ref": {
+          "0": "skip",
+          "1": 21,
+          "2": "skip",
+          "3": "skip",
+          "4": "ok",
+          "5": "skip",
+          "6": "skip",
+          "7": "skip",
+          "8": "skip",
+          "9": "skip",
+          "10": "skip",
+          "11": "skip",
+          "12": "skip",
+          "13": "skip",
+          "14": "skip",
+          "15": "skip",
+          "16": "skip",
+          "17": "ok",
+          "18": "skip",
+          "19": "skip",
+          "20": "ok",
+          "21": "ok",
+          "22": [
+            [
+              "order.write@orders/*"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "23": "skip",
+          "24": "DENY/NOT_REDELEGATABLE",
+          "25": "skip",
+          "26": "skip",
+          "27": "skip",
+          "28": "ok",
+          "29": "skip",
+          "30": "skip",
+          "31": "DENY/SCOPE_VIOLATION",
+          "32": "skip",
+          "33": "skip",
+          "34": "DENY/SCOPE_VIOLATION",
+          "35": "skip",
+          "36": "skip",
+          "37": "skip",
+          "38": "skip",
+          "39": "skip",
+          "40": "skip",
+          "41": "skip",
+          "42": "skip",
+          "43": "ok",
+          "44": "skip",
+          "n_effects": 0,
+          "n_receipts": 0,
+          "effects": []
+        },
+        "mine": {
+          "0": "skip",
+          "1": 21,
+          "2": "skip",
+          "3": "skip",
+          "4": "ok",
+          "5": "skip",
+          "6": "skip",
+          "7": "skip",
+          "8": "skip",
+          "9": "skip",
+          "10": "skip",
+          "11": "skip",
+          "12": "skip",
+          "13": "skip",
+          "14": "skip",
+          "15": "skip",
+          "16": "skip",
+          "17": "ok",
+          "18": "skip",
+          "19": "skip",
+          "20": "ok",
+          "21": "ok",
+          "22": [
+            [
+              "order.write@orders/*"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "23": "skip",
+          "24": "DENY/SCOPE_VIOLATION",
+          "25": "skip",
+          "26": "skip",
+          "27": "skip",
+          "28": "ok",
+          "29": "skip",
+          "30": "skip",
+          "31": "DENY/SCOPE_VIOLATION",
+          "32": "skip",
+          "33": "skip",
+          "34": "DENY/SCOPE_VIOLATION",
+          "35": "skip",
+          "36": "skip",
+          "37": "skip",
+          "38": "skip",
+          "39": "skip",
+          "40": "skip",
+          "41": "skip",
+          "42": "skip",
+          "43": "ok",
+          "44": "skip",
+          "n_effects": 0,
+          "n_receipts": 0,
+          "effects": []
+        }
+      },
+      {
+        "case": "walk-73",
+        "diff": {
+          "32": [
+            [
+              "DENY",
+              "TASK_MISMATCH",
+              0
+            ],
+            [
+              "DENY",
+              "TOKEN_INVALID",
+              0
+            ]
+          ]
+        },
+        "ref": {
+          "0": "skip",
+          "1": "skip",
+          "2": "skip",
+          "3": 11,
+          "4": "skip",
+          "5": "skip",
+          "6": "skip",
+          "7": "skip",
+          "8": "ok",
+          "9": "ok",
+          "10": "ok",
+          "11": "skip",
+          "12": "ok",
+          "13": "skip",
+          "14": "skip",
+          "15": "ok",
+          "16": "skip",
+          "17": "ok",
+          "18": "skip",
+          "19": "skip",
+          "20": "skip",
+          "21": 22,
+          "22": "ok",
+          "23": "skip",
+          "24": "skip",
+          "25": "skip",
+          "26": "skip",
+          "27": "ok",
+          "28": true,
+          "29": "skip",
+          "30": [
+            [
+              "order.read@orders/**",
+              "order.read@orders/7"
+            ],
+            1,
+            "A",
+            true
+          ],
+          "31": "ok",
+          "32": [
+            "DENY",
+            "TASK_MISMATCH",
+            0
+          ],
+          "33": "ok",
+          "34": "skip",
+          "35": "ok",
+          "36": "DENY/SCOPE_VIOLATION",
+          "37": false,
+          "38": "skip",
+          "39": "ok",
+          "40": "DENY/SCOPE_VIOLATION",
+          "41": "skip",
+          "42": "skip",
+          "43": "skip",
+          "44": "skip",
+          "45": "skip",
+          "46": "DENY/SCOPE_VIOLATION",
+          "47": "ok",
+          "48": "DENY/SCOPE_VIOLATION",
+          "n_effects": 0,
+          "n_receipts": 1,
+          "effects": []
+        },
+        "mine": {
+          "0": "skip",
+          "1": "skip",
+          "2": "skip",
+          "3": 11,
+          "4": "skip",
+          "5": "skip",
+          "6": "skip",
+          "7": "skip",
+          "8": "ok",
+          "9": "ok",
+          "10": "ok",
+          "11": "skip",
+          "12": "ok",
+          "13": "skip",
+          "14": "skip",
+          "15": "ok",
+          "16": "skip",
+          "17": "ok",
+          "18": "skip",
+          "19": "skip",
+          "20": "skip",
+          "21": 22,
+          "22": "ok",
+          "23": "skip",
+          "24": "skip",
+          "25": "skip",
+          "26": "skip",
+          "27": "ok",
+          "28": true,
+          "29": "skip",
+          "30": [
+            [
+              "order.read@orders/**",
+              "order.read@orders/7"
+            ],
+            1,
+            "A",
+            true
+          ],
+          "31": "ok",
+          "32": [
+            "DENY",
+            "TOKEN_INVALID",
+            0
+          ],
+          "33": "ok",
+          "34": "skip",
+          "35": "ok",
+          "36": "DENY/SCOPE_VIOLATION",
+          "37": false,
+          "38": "skip",
+          "39": "ok",
+          "40": "DENY/SCOPE_VIOLATION",
+          "41": "skip",
+          "42": "skip",
+          "43": "skip",
+          "44": "skip",
+          "45": "skip",
+          "46": "DENY/SCOPE_VIOLATION",
+          "47": "ok",
+          "48": "DENY/SCOPE_VIOLATION",
+          "n_effects": 0,
+          "n_receipts": 1,
+          "effects": []
+        }
+      },
+      {
+        "case": "walk-152",
+        "diff": {
+          "47": [
+            "DENY/NOT_REDELEGATABLE",
+            "DENY/SCOPE_VIOLATION"
+          ]
+        },
+        "ref": {
+          "0": "ok",
+          "1": "skip",
+          "2": "skip",
+          "3": "ok",
+          "4": "ok",
+          "5": "skip",
+          "6": "ok",
+          "7": "ok",
+          "8": "ok",
+          "9": 2,
+          "10": "skip",
+          "11": "ok",
+          "12": "ok",
+          "13": "skip",
+          "14": "skip",
+          "15": "skip",
+          "16": "skip",
+          "17": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "B",
+            false
+          ],
+          "18": "ok",
+          "19": "skip",
+          "20": "skip",
+          "21": "skip",
+          "22": "ok",
+          "23": "ok",
+          "24": "skip",
+          "25": "skip",
+          "26": "skip",
+          "27": "DENY/SCOPE_VIOLATION",
+          "28": "ok",
+          "29": "skip",
+          "30": "skip",
+          "31": "skip",
+          "32": "skip",
+          "33": "skip",
+          "34": "skip",
+          "35": "ok",
+          "36": "skip",
+          "37": "skip",
+          "38": "ok",
+          "39": [
+            [
+              "order.read@orders/*",
+              "order.read@orders/**"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "40": "skip",
+          "41": "skip",
+          "42": [
+            [
+              "order.read",
+              "order.read@orders/*",
+              "order.read@orders/**"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "43": true,
+          "44": "DENY/TOKEN_INVALID",
+          "45": "ok",
+          "46": "skip",
+          "47": "DENY/NOT_REDELEGATABLE",
+          "48": "ok",
+          "49": "skip",
+          "n_effects": 0,
+          "n_receipts": 0,
+          "effects": []
+        },
+        "mine": {
+          "0": "ok",
+          "1": "skip",
+          "2": "skip",
+          "3": "ok",
+          "4": "ok",
+          "5": "skip",
+          "6": "ok",
+          "7": "ok",
+          "8": "ok",
+          "9": 2,
+          "10": "skip",
+          "11": "ok",
+          "12": "ok",
+          "13": "skip",
+          "14": "skip",
+          "15": "skip",
+          "16": "skip",
+          "17": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "B",
+            false
+          ],
+          "18": "ok",
+          "19": "skip",
+          "20": "skip",
+          "21": "skip",
+          "22": "ok",
+          "23": "ok",
+          "24": "skip",
+          "25": "skip",
+          "26": "skip",
+          "27": "DENY/SCOPE_VIOLATION",
+          "28": "ok",
+          "29": "skip",
+          "30": "skip",
+          "31": "skip",
+          "32": "skip",
+          "33": "skip",
+          "34": "skip",
+          "35": "ok",
+          "36": "skip",
+          "37": "skip",
+          "38": "ok",
+          "39": [
+            [
+              "order.read@orders/*",
+              "order.read@orders/**"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "40": "skip",
+          "41": "skip",
+          "42": [
+            [
+              "order.read",
+              "order.read@orders/*",
+              "order.read@orders/**"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "43": true,
+          "44": "DENY/TOKEN_INVALID",
+          "45": "ok",
+          "46": "skip",
+          "47": "DENY/SCOPE_VIOLATION",
+          "48": "ok",
+          "49": "skip",
+          "n_effects": 0,
+          "n_receipts": 0,
+          "effects": []
+        }
+      },
+      {
+        "case": "walk-164",
+        "diff": {
+          "49": [
+            "DENY/NOT_REDELEGATABLE",
+            "DENY/SCOPE_VIOLATION"
+          ]
+        },
+        "ref": {
+          "0": "skip",
+          "1": "skip",
+          "2": "skip",
+          "3": "ok",
+          "4": "ok",
+          "5": "skip",
+          "6": "skip",
+          "7": "ok",
+          "8": "skip",
+          "9": "DENY/SCOPE_VIOLATION",
+          "10": "skip",
+          "11": "ok",
+          "12": "skip",
+          "13": "skip",
+          "14": "skip",
+          "15": "skip",
+          "16": "skip",
+          "17": "skip",
+          "18": "ok",
+          "19": "DENY/SCOPE_VIOLATION",
+          "20": "ok",
+          "21": "skip",
+          "22": "ok",
+          "23": "skip",
+          "24": "skip",
+          "25": 2,
+          "26": "ok",
+          "27": "ok",
+          "28": "skip",
+          "29": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "30": "skip",
+          "31": "skip",
+          "32": "skip",
+          "33": "DENY/SCOPE_VIOLATION",
+          "34": "skip",
+          "35": "skip",
+          "36": "skip",
+          "37": "skip",
+          "38": "ok",
+          "39": "DENY/SCOPE_VIOLATION",
+          "40": "ok",
+          "41": 12,
+          "42": "skip",
+          "43": 32,
+          "44": "skip",
+          "45": "ok",
+          "46": "skip",
+          "47": "skip",
+          "48": "skip",
+          "49": "DENY/NOT_REDELEGATABLE",
+          "n_effects": 0,
+          "n_receipts": 0,
+          "effects": []
+        },
+        "mine": {
+          "0": "skip",
+          "1": "skip",
+          "2": "skip",
+          "3": "ok",
+          "4": "ok",
+          "5": "skip",
+          "6": "skip",
+          "7": "ok",
+          "8": "skip",
+          "9": "DENY/SCOPE_VIOLATION",
+          "10": "skip",
+          "11": "ok",
+          "12": "skip",
+          "13": "skip",
+          "14": "skip",
+          "15": "skip",
+          "16": "skip",
+          "17": "skip",
+          "18": "ok",
+          "19": "DENY/SCOPE_VIOLATION",
+          "20": "ok",
+          "21": "skip",
+          "22": "ok",
+          "23": "skip",
+          "24": "skip",
+          "25": 2,
+          "26": "ok",
+          "27": "ok",
+          "28": "skip",
+          "29": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "30": "skip",
+          "31": "skip",
+          "32": "skip",
+          "33": "DENY/SCOPE_VIOLATION",
+          "34": "skip",
+          "35": "skip",
+          "36": "skip",
+          "37": "skip",
+          "38": "ok",
+          "39": "DENY/SCOPE_VIOLATION",
+          "40": "ok",
+          "41": 12,
+          "42": "skip",
+          "43": 32,
+          "44": "skip",
+          "45": "ok",
+          "46": "skip",
+          "47": "skip",
+          "48": "skip",
+          "49": "DENY/SCOPE_VIOLATION",
+          "n_effects": 0,
+          "n_receipts": 0,
+          "effects": []
+        }
+      }
+    ]
+  },
+  "F13-clock-skew": {
+    "cases": 88,
+    "divergences": 18,
+    "detail": [
+      {
+        "case": "skew1-off-1",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew5-off-1",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew5-off-5",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew30-off-1",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew30-off-5",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew30-off-30",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-10",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-11",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-13",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-22",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-27",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-34",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-36",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-37",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-39",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-40",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-42",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      },
+      {
+        "case": "skew-rnd-51",
+        "diff": {
+          "key": [
+            "OK",
+            "REPLAY"
+          ]
+        },
+        "ref": {
+          "key": "OK"
+        },
+        "mine": {
+          "key": "REPLAY"
+        }
+      }
+    ]
+  },
+  "__meta__": {
+    "seed": 20240911,
+    "ref_max_request_age": 50,
+    "mine_max_request_age": 300,
+    "ref_pull_interval": 10,
+    "ttl": 1000
+  }
+}

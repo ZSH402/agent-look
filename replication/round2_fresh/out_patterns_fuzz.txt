@@ -1,0 +1,15 @@
+random pairs=3000  matches_diff=0  subsumes_diff=0
+ref subsumes=True pairs=862  soundness_violations=0
+
+== 空段定向探针（唯一发现 DIFF 的方向）==
+subsumes('a//b','a//b') mine=True ref=False   <<< DIFF
+subsumes('a//b','a/*') mine=False ref=False
+subsumes('a/*','a//b') mine=False ref=False
+subsumes('a//b','a//c') mine=False ref=False
+subsumes('**','a//b') mine=False ref=False
+subsumes('a//b','**') mine=True ref=True
+subsumes('a//**','a/**') mine=True ref=False   <<< DIFF
+subsumes('a/**','a//**') mine=False ref=False
+subsumes('a/b//c','a/b//c') mine=True ref=False   <<< DIFF
+subsumes('a//b','**/**') mine=False ref=False
+subsumes('//','**') mine=True ref=True

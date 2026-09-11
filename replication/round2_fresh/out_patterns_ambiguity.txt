@@ -1,0 +1,22 @@
+kind args                         mine   ref    diff  note
+m    ('**/a', 'a')                False  False           非末位 ** ：我当字面量段
+m    ('a/**/b', 'a/x/b')          False  False           非末位 ** ：我当字面量段
+m    ('a/**/b', 'a/**/b')         True   True            非末位 ** 全字面
+m    ('*', '**')                  True   True            资源串本身是 '**' 时被 * 匹配？
+m    ('*', '')                    False  False           空资源串（一个空段）是否被 * 匹配
+m    ('a/*', 'a//b')              False  False           空段 + 有约束模式
+m    ('a//b', 'a//b')             False  False           模式自身含空段
+m    ('/a', '/a')                 False  False           模式前导斜杠
+m    ('a/', 'a/')                 False  False           模式尾随斜杠
+m    ('a/*/', 'a/b/')             False  False           模式尾随斜杠 + *
+m    ('**/**', 'a/b')             False  False           重复 **
+s    ('a/b', 'a')                 False  False           q 固定段更短
+s    ('a', 'a/b')                 False  False           p 固定段更短
+s    ('a/*/**', 'a/*')            False  False           q 无尾 ** 但 p 有
+s    ('a//b', 'a//b')             True   False  DIFF <<< 含空段的模式之间
+s    ('a//b', '**')               True   True            退化模式 vs 无条件
+s    ('**', 'a//b')               False  False           无条件 vs 退化模式
+s    ('a/**/**', 'a/**')          True   True            重复 ** 的包含
+s    ('a/**/b', 'a/**/b')         True   True            非末位 ** 的自包含
+m    ('a/b/c/**', 'a/b/c')        True   True            ** 吃零段（三段前缀）
+m    ('a/b/c/**', 'a/b/c/d/e')    True   True            ** 多吃

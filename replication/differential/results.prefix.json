@@ -1,0 +1,3582 @@
+{
+  "F1a-matches": {
+    "cases": 3120,
+    "divergences": 195,
+    "detail": [
+      {
+        "pattern": "a",
+        "resource": "a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "a//",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "//a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "//a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "b//",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "//b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "//b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "a//",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "b//",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "//a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "//b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "//",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/a",
+        "resource": "a/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/a",
+        "resource": "/a/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/a/**",
+        "resource": "/a/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/b",
+        "resource": "a/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/b",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/b/**",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/*",
+        "resource": "a/",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "a/*",
+        "resource": "a/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/*",
+        "resource": "a/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/*",
+        "resource": "/a/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/*",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/*/**",
+        "resource": "a/",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "a/*/**",
+        "resource": "a//",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "a/*/**",
+        "resource": "/a/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "a/*/**",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/a",
+        "resource": "b/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/a",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/a/**",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/b",
+        "resource": "b/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/b",
+        "resource": "/b/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/b/**",
+        "resource": "/b/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/*",
+        "resource": "b/",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "b/*",
+        "resource": "b/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/*",
+        "resource": "b/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/*",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/*",
+        "resource": "/b/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/*/**",
+        "resource": "b/",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "b/*/**",
+        "resource": "b//",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "b/*/**",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "b/*/**",
+        "resource": "/b/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/a",
+        "resource": "/a",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/a",
+        "resource": "a/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/a",
+        "resource": "b/a/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/a",
+        "resource": "/a/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/a",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/a/**",
+        "resource": "/a",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/a/**",
+        "resource": "/a/b",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/a/**",
+        "resource": "/a/",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/a/**",
+        "resource": "/b/a",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/b",
+        "resource": "/b",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/b",
+        "resource": "a/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/b",
+        "resource": "b/b/",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/b",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/b",
+        "resource": "/b/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/b/**",
+        "resource": "/b",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/b/**",
+        "resource": "/a/b",
+        "ref": true,
+        "mine": false,
+        "oracle": false
+      },
+      {
+        "pattern": "*/b/**",
+        "resource": "/b/a",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      },
+      {
+        "pattern": "*/b/**",
+        "resource": "/b/",
+        "ref": false,
+        "mine": true,
+        "oracle": true
+      }
+    ]
+  },
+  "F1b-subsumes": {
+    "cases": 6400,
+    "divergences": 0,
+    "detail": []
+  },
+  "F1c-system-matches": {
+    "cases": 280,
+    "divergences": 61,
+    "detail": [
+      {
+        "pattern": "*/a",
+        "resource": "/b/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "*",
+        "resource": "a//",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "*/b/*/**",
+        "resource": "a/b/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "a/*",
+        "resource": "/a/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "*/a/b",
+        "resource": "/a/b",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "*/b/*/**",
+        "resource": "/b/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "*/a/*/**",
+        "resource": "/a/a",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "*/b",
+        "resource": "/b/b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "*/*/**",
+        "resource": "//",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "*/b/*",
+        "resource": "a/b/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "a/*",
+        "resource": "a/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "b",
+        "resource": "b//",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b/*/*",
+        "resource": "b/a/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "*/*/*/**",
+        "resource": "b/a/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "*/b/*/**",
+        "resource": "/b/b",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "a/*",
+        "resource": "/a/b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/b",
+        "resource": "a/b/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "*/a",
+        "resource": "a/a/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b/*",
+        "resource": "b/b/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/b/*/**",
+        "resource": "a/b/",
+        "ref": {
+          "k": "DENY"
+        },
+        "mine": {
+          "k": "ALLOW"
+        },
+        "oracle": true
+      },
+      {
+        "pattern": "a",
+        "resource": "a/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "a//",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "/a/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a",
+        "resource": "//a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a/b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "/a/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "a/**",
+        "resource": "//a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "b/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "/b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "b//",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "/b/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b",
+        "resource": "//b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b/a",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b/b",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      },
+      {
+        "pattern": "b/**",
+        "resource": "/b/",
+        "ref": {
+          "k": "ALLOW"
+        },
+        "mine": {
+          "k": "DENY"
+        },
+        "oracle": false
+      }
+    ]
+  },
+  "F1d-system-subsumes": {
+    "cases": 200,
+    "divergences": 0,
+    "detail": []
+  },
+  "F1e-soundness": {
+    "ref": {
+      "violations": 0,
+      "detail": []
+    },
+    "mine": {
+      "violations": 0,
+      "detail": []
+    },
+    "oracle": {
+      "violations": 0,
+      "detail": []
+    }
+  },
+  "F2-attenuation": {
+    "cases": 60,
+    "divergences": 28,
+    "detail": [
+      {
+        "case": "atten-0",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@**"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": [
+            [
+              "order.read@**",
+              "order.read@orders/7/x"
+            ],
+            2,
+            "C",
+            true
+          ],
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@**"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": [
+            [
+              "order.read@**",
+              "order.read@orders/7/x"
+            ],
+            2,
+            "C",
+            true
+          ],
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-1",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "db.export@reports/**",
+              "order.read@orders/7"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "db.export@reports/**",
+              "order.read@orders/7"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-5",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "mail.send@**"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "mail.send@**"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-6",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/**"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/**"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-7",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "db.export@reports/q3"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "db.export@reports/q3"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-9",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@**",
+              "order.read@orders/*"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@**",
+              "order.read@orders/*"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-10",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "db.export@reports/**"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "db.export@reports/**"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-11",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-12",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "mail.send@**",
+              "order.read@orders/9"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "mail.send@**",
+              "order.read@orders/9"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-15",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-17",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-21",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/*",
+              "order.read@orders/7/x"
+            ],
+            1,
+            "D",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/*",
+              "order.read@orders/7/x"
+            ],
+            1,
+            "D",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-22",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-28",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-29",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read",
+              "order.read@**"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read",
+              "order.read@**"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-30",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-32",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-36",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/9"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/9"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-37",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read",
+              "order.write"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": [
+            [
+              "order.read@**"
+            ],
+            2,
+            "B",
+            false
+          ],
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read",
+              "order.write"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": [
+            [
+              "order.read@**"
+            ],
+            2,
+            "B",
+            false
+          ],
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-38",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-41",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@**",
+              "order.read@orders/9"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@**",
+              "order.read@orders/9"
+            ],
+            1,
+            "C",
+            false
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-42",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "E",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-45",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "mail.send@**",
+              "order.read@orders/*"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "mail.send@**",
+              "order.read@orders/*"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "skip(合法)",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-47",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/*",
+              "order.write@orders/*"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": [
+            [
+              "order.read@orders/9"
+            ],
+            2,
+            "E",
+            false
+          ],
+          "hop2": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/*",
+              "order.write@orders/*"
+            ],
+            1,
+            "D",
+            true
+          ],
+          "hop1": [
+            [
+              "order.read@orders/9"
+            ],
+            2,
+            "E",
+            false
+          ],
+          "hop2": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-53",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "DENY/EXC:Denied"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7/x"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "DENY/EXC:Denied"
+        }
+      },
+      {
+        "case": "atten-54",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/7",
+              "order.read@orders/9"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/7",
+              "order.read@orders/9"
+            ],
+            1,
+            "C",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-55",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "db.export@reports/**",
+              "order.read@orders/7"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "db.export@reports/**",
+              "order.read@orders/7"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      },
+      {
+        "case": "atten-57",
+        "diff": {
+          "nonholder": [
+            "DENY/EXC:KeyError",
+            "DENY/EXC:Denied"
+          ]
+        },
+        "ref": {
+          "hop0": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:KeyError",
+          "seal_after": "ACCEPT"
+        },
+        "mine": {
+          "hop0": [
+            [
+              "order.read@orders/*"
+            ],
+            1,
+            "B",
+            true
+          ],
+          "hop1": "DENY/EXC:Denied",
+          "over_foreign_cap": "DENY/EXC:Denied",
+          "over_widen": "DENY/EXC:Denied",
+          "over_superset": "DENY/EXC:Denied",
+          "nonholder": "DENY/EXC:Denied",
+          "seal_after": "ACCEPT"
+        }
+      }
+    ]
+  },
+  "F3-order": {
+    "cases": 50,
+    "divergences": 9,
+    "detail": [
+      {
+        "case": "order-expired+scope+task+revoked",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-expired+revoked",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-2",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-18",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-25",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-27",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-33",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-34",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      },
+      {
+        "case": "order-rnd-37",
+        "diff": {
+          "key": [
+            "TOKEN_REVOKED",
+            "TOKEN_EXPIRED"
+          ]
+        },
+        "ref": {
+          "key": "TOKEN_REVOKED",
+          "dec": "DENY"
+        },
+        "mine": {
+          "key": "TOKEN_EXPIRED",
+          "dec": "DENY"
+        }
+      }
+    ]
+  },
+  "F4-replay": {
+    "cases": 79,
+    "divergences": 24,
+    "detail": [
+      {
+        "case": "window-age51",
+        "diff": {
+          "key": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "REPLAY"
+        },
+        "mine": {
+          "key": "OK"
+        }
+      },
+      {
+        "case": "window-age60",
+        "diff": {
+          "key": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "REPLAY"
+        },
+        "mine": {
+          "key": "OK"
+        }
+      },
+      {
+        "case": "window-age100",
+        "diff": {
+          "key": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "REPLAY"
+        },
+        "mine": {
+          "key": "OK"
+        }
+      },
+      {
+        "case": "window-age200",
+        "diff": {
+          "key": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "REPLAY"
+        },
+        "mine": {
+          "key": "OK"
+        }
+      },
+      {
+        "case": "window-future",
+        "diff": {
+          "key": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "REPLAY"
+        },
+        "mine": {
+          "key": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-0",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-3",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-6",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-9",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-11",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-19",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-21",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-23",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-28",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-32",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-35",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-36",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-38",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-45",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-48",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-49",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-51",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "REPLAY"
+        }
+      },
+      {
+        "case": "replay-rnd-54",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      },
+      {
+        "case": "replay-rnd-59",
+        "diff": {
+          "r1": [
+            "REPLAY",
+            "OK"
+          ],
+          "r2": [
+            "REPLAY",
+            "OK"
+          ]
+        },
+        "ref": {
+          "r1": "REPLAY",
+          "r2": "REPLAY"
+        },
+        "mine": {
+          "r1": "OK",
+          "r2": "OK"
+        }
+      }
+    ]
+  },
+  "F5-revocation": {
+    "cases": 9,
+    "divergences": 1,
+    "detail": [
+      {
+        "case": "cred-issue-grant",
+        "diff": {
+          "after_issue_grant": [
+            "TOKEN_INVALID",
+            "OK"
+          ]
+        },
+        "ref": {
+          "before": "OK",
+          "after_issue_grant": "TOKEN_INVALID",
+          "new_cred": 2
+        },
+        "mine": {
+          "before": "OK",
+          "after_issue_grant": "OK",
+          "new_cred": 2
+        }
+      }
+    ]
+  },
+  "F6-composite": {
+    "cases": 65,
+    "divergences": 32,
+    "detail": [
+      {
+        "case": "req-partly-out",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-all-out",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-5",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-6",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-7",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-9",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-10",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-12",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-15",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-17",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-19",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-22",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-24",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-26",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-28",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-29",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-30",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-31",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-32",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-34",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-35",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-38",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-39",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-42",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-46",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-47",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-48",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-49",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-50",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-51",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-54",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      },
+      {
+        "case": "req-rnd-58",
+        "diff": {
+          "eff": [
+            0,
+            1
+          ],
+          "key": [
+            "SCOPE_VIOLATION",
+            "OK"
+          ]
+        },
+        "ref": {
+          "key": "SCOPE_VIOLATION",
+          "eff": 0
+        },
+        "mine": {
+          "key": "OK",
+          "eff": 1
+        }
+      }
+    ]
+  },
+  "F7-task": {
+    "cases": 44,
+    "divergences": 0,
+    "detail": []
+  },
+  "__meta__": {
+    "seed": 20240911,
+    "ref_max_request_age": 50,
+    "mine_max_request_age": 300,
+    "ref_pull_interval": 10,
+    "ttl": 1000
+  }
+}

@@ -1,0 +1,249 @@
+{
+ "mine": {
+  "files": 32,
+  "ngrams": 23629,
+  "lines": 4669
+ },
+ "rows": [
+  {
+   "repo": "0xballistics/mostargate",
+   "papers": [
+    "2607.22445v1"
+   ],
+   "bytes": 2006461,
+   "py_files": 23,
+   "ngram_overlap": 0,
+   "line_overlap": 16,
+   "examples": []
+  },
+  {
+   "repo": "AIM-Intelligence/AIM-MCP",
+   "papers": [
+    "2608.23763v1"
+   ],
+   "bytes": 52474,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "Abrar051/sml_mcp_benchmark",
+   "papers": [
+    "2609.07370v1"
+   ],
+   "bytes": 867319,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "AokiKoshiro/in-context-neurofeedback",
+   "papers": [
+    "2609.00904v1"
+   ],
+   "bytes": 127854,
+   "py_files": 9,
+   "ngram_overlap": 0,
+   "line_overlap": 6,
+   "examples": []
+  },
+  {
+   "repo": "UKGovernmentBEIS/control-arena",
+   "papers": [
+    "2607.22445v1"
+   ],
+   "bytes": 2926480,
+   "py_files": 593,
+   "ngram_overlap": 0,
+   "line_overlap": 57,
+   "examples": []
+  },
+  {
+   "repo": "ZhuoningXu/MasDrift",
+   "papers": [
+    "2608.07556v2"
+   ],
+   "bytes": 1458214,
+   "py_files": 51,
+   "ngram_overlap": 3,
+   "line_overlap": 95,
+   "examples": [
+    "from __future__ import annotations from dataclasses import dataclass field from",
+    "__future__ import annotations import argparse import json import import import"
+   ]
+  },
+  {
+   "repo": "agentic-commerce-protocol/agentic-commerce-protocol",
+   "papers": [
+    "2608.21942v1"
+   ],
+   "bytes": 432315,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "checkmarble/marble",
+   "papers": [
+    "2607.29190v1"
+   ],
+   "bytes": 35329,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "cisco-ai-defense/mcp-scanner",
+   "papers": [
+    "2608.23763v1"
+   ],
+   "bytes": 2501917,
+   "py_files": 363,
+   "ngram_overlap": 3,
+   "line_overlap": 106,
+   "examples": [
+    "for node ast walk tree isinstance node ast functiondef ast",
+    "self send_response self send_header content type application json self send_header"
+   ]
+  },
+  {
+   "repo": "earendil-works/pi",
+   "papers": [
+    "2609.08371v1"
+   ],
+   "bytes": 5477727,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": [],
+   "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+  },
+  {
+   "repo": "ecordell/pymacaroons",
+   "papers": [
+    "2609.06500v1"
+   ],
+   "bytes": 26034,
+   "py_files": 32,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "eqtylab/mcp-guardian",
+   "papers": [
+    "2608.23763v1"
+   ],
+   "bytes": 2911186,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": [],
+   "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+  },
+  {
+   "repo": "gitleaks/gitleaks",
+   "papers": [
+    "2608.21423v1"
+   ],
+   "bytes": 306599,
+   "py_files": 1,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "google-agentic-commerce/AP2",
+   "papers": [
+    "2608.21942v1"
+   ],
+   "bytes": 1667408,
+   "py_files": 116,
+   "ngram_overlap": 3,
+   "line_overlap": 55,
+   "examples": [
+    "from cryptography exceptions import invalidsignature from cryptography hazmat primitives asymmetric",
+    "from cryptography exceptions import invalidsignature from cryptography hazmat primitives asymmetric",
+    "from __future__ import annotations from dataclasses import dataclass field from"
+   ]
+  },
+  {
+   "repo": "hashgraph-online/langchain-registry-broker",
+   "papers": [
+    "2608.21942v1"
+   ],
+   "bytes": 21428,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": []
+  },
+  {
+   "repo": "haven-nyuad/webmas",
+   "papers": [
+    "2608.00202"
+   ],
+   "bytes": 4950699,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": [],
+   "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+  },
+  {
+   "repo": "huggingface/trl",
+   "papers": [
+    "2608.18351v1"
+   ],
+   "bytes": 3003870,
+   "py_files": 356,
+   "ngram_overlap": 12,
+   "line_overlap": 164,
+   "examples": [
+    "content type application json self send_header content length str len",
+    "content type application json try with urllib request urlopen req",
+    "__future__ import annotations import json import from dataclasses import dataclass"
+   ]
+  },
+  {
+   "repo": "invariantlabs-ai/mcp-scan",
+   "papers": [
+    "2608.23763v1"
+   ],
+   "bytes": 1691264,
+   "py_files": 135,
+   "ngram_overlap": 5,
+   "line_overlap": 54,
+   "examples": [
+    "content type application json self send_header content length str len"
+   ]
+  },
+  {
+   "repo": "lasso-security/mcp-gateway",
+   "papers": [
+    "2608.23763v1"
+   ],
+   "bytes": 267861,
+   "py_files": 31,
+   "ngram_overlap": 0,
+   "line_overlap": 9,
+   "examples": []
+  },
+  {
+   "repo": "microsoft/PyRIT",
+   "papers": [
+    "2608.21423v1"
+   ],
+   "bytes": 18202624,
+   "py_files": 0,
+   "ngram_overlap": 0,
+   "line_overlap": 0,
+   "examples": [],
+   "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+  }
+ ]
+}

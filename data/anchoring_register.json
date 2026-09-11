@@ -1,0 +1,643 @@
+{
+ "note": "锚定登记表。三条件：每个输入有外部锚定或显式标注为自造；每个基线有独立实现路径或显式标注为非独立；每条断言有机械检查或未实现标记。本文件由 tools/audit_register.py 机械校验，任何未标注项都会导致该工具返回非零。",
+ "allowed": {
+  "input_status": [
+   "external",
+   "mechanical",
+   "self_made",
+   "assumption",
+   "mixed"
+  ],
+  "assertion_status": [
+   "checked",
+   "measured",
+   "unimplemented",
+   "unverified"
+  ],
+  "baseline_status": [
+   "independent",
+   "shared_path",
+   "not_applicable"
+  ]
+ },
+ "inputs": [
+  {
+   "id": "cap_universe_toy",
+   "what": "玩具能力宇宙（18 个能力）",
+   "status": "self_made",
+   "used_by": [
+    "E2",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E18",
+    "E19",
+    "E21"
+   ],
+   "disposition": "全部基于该宇宙的结论须并列标注为自造基底；E26 已提供真实基底对照，且显示中间三级排序不可迁移"
+  },
+  {
+   "id": "cap_universe_real",
+   "what": "真实工具集（AgentDojo 69 个 suite 工具）",
+   "status": "external",
+   "anchor": "data/agentdojo_bench.json ← tools/build_agentdojo_bench.py ← agentdojo 0.1.35 (MIT)",
+   "used_by": [
+    "E26"
+   ]
+  },
+  {
+   "id": "harm_effects_toy",
+   "what": "玩具基底的效果类别与可逆性",
+   "status": "self_made",
+   "anchor": "src/harm.py:TOOL_EFFECTS",
+   "used_by": [
+    "E11",
+    "E12",
+    "E14",
+    "E15",
+    "E16",
+    "E26"
+   ],
+   "disposition": "已做有界扰动扫描（E16 六份备选清单），但输入本身无外部真值；结论须标注"
+  },
+  {
+   "id": "harm_effects_real",
+   "what": "真实基底的效果类别（函数体静态分析）",
+   "status": "mechanical",
+   "anchor": "tools/build_agentdojo_bench.py:_mutates；与独立 docstring 动词交叉验证 69/69",
+   "used_by": [
+    "E26"
+   ]
+  },
+  {
+   "id": "harm_catalogue",
+   "what": "数据目录（资源命名空间的敏感级别）",
+   "status": "self_made",
+   "anchor": "src/harm.py:RESOURCE_CLASSES",
+   "used_by": [
+    "E11",
+    "E12",
+    "E14",
+    "E15",
+    "E16"
+   ],
+   "disposition": "仅玩具基底使用；真实基底无数据分级目录，E26 因此退回能力级危害（已在 spec §2.10 记录偏差）"
+  },
+  {
+   "id": "harm_set_real",
+   "what": "真实基底的危害集合（21 个工具）",
+   "status": "external",
+   "anchor": "data/agentdojo_bench.json:extraction.harm_set_from_injection_ground_truth ← 基准注入任务的 ground_truth()",
+   "used_by": [
+    "E26"
+   ]
+  },
+  {
+   "id": "harm_aggregation",
+   "what": "危害聚合规则（strict/moderate/lenient）",
+   "status": "assumption",
+   "anchor": "src/harm.py:VARIANTS；已作为变体穷举而非隐含前提",
+   "used_by": [
+    "E11",
+    "E14",
+    "E15",
+    "E16"
+   ],
+   "disposition": "研究者判断，已显式扫描；任何只报单一变体的结果不得作为结论；另：surplus 的**判定口径**（模式格 vs 可观察）本身也是一处研究者选择——E29 显示前者会虚增 L2。"
+  },
+  {
+   "id": "task_toy",
+   "what": "玩具任务 HOP_TASK（处理 2024 订单）",
+   "status": "self_made",
+   "anchor": "experiments/scope_experiments.py:HOP_TASK",
+   "used_by": [
+    "E11",
+    "E12",
+    "E13",
+    "E15",
+    "E16"
+   ],
+   "disposition": "玩具任务为自造；E26 提供真实用户任务对照，且显示阶梯中间三级排序不可迁移"
+  },
+  {
+   "id": "task_real",
+   "what": "真实用户任务（ground_truth() 的工具调用）",
+   "status": "mixed",
+   "anchor": "external：data/agentdojo_bench.json:suites[*].user_tasks[*].ground_truth",
+   "self_made_part": "按 i % HOPS 摊派到 4 跳（experiments/substrate.py:91-95）；下游根范围取 root_scope[:1]",
+   "used_by": [
+    "E26"
+   ],
+   "disposition": "委托结构与任务分解仍为自造，正文必须声明"
+  },
+  {
+   "id": "adjacency_toy",
+   "what": "玩具基底的「相邻动词」映射",
+   "status": "self_made",
+   "anchor": "experiments/scope_experiments.py:ADJACENT",
+   "used_by": [
+    "E11",
+    "E12",
+    "E15",
+    "E16"
+   ],
+   "disposition": "手写映射，天然使「动词过泛」这一失效模式显得重要；真实基底改用机械规则"
+  },
+  {
+   "id": "adjacency_real",
+   "what": "真实基底的相邻动词（首个非环境参数名相同）",
+   "status": "mechanical",
+   "anchor": "experiments/substrate.py:real_substrate",
+   "used_by": [
+    "E26"
+   ],
+   "disposition": "**param 规则（首个非环境参数名相同）已被 E28 证明是错误代理**：它使 banking 在两种拓扑下都违反 L1≤L2≤L3，从而产生「排序不可迁移」这一虚假结论。object 规则（同一环境对象）在两拓扑下四 suite 全部成立。"
+  },
+  {
+   "id": "corpus_synthetic",
+   "what": "自造攻击语料（4 基线 × 8 变换 = 32 条）",
+   "status": "self_made",
+   "anchor": "experiments/robustness.py:adversarial_corpus",
+   "used_by": [
+    "E23"
+   ],
+   "disposition": "实测高估护栏（0.656 vs 真实 0.978）；仅可作变换轴的对照，不得作护栏评估依据"
+  },
+  {
+   "id": "corpus_real",
+   "what": "AgentDojo 官方注入语料（230 条载荷）",
+   "status": "external",
+   "anchor": "data/agentdojo_corpus.json ← 54 官方目标 × 5 官方模板 ← agentdojo 0.1.35",
+   "used_by": [
+    "E25"
+   ]
+  },
+  {
+   "id": "goal_mapping_rules",
+   "what": "攻击目标 → 能力的 13 条关键词规则",
+   "status": "self_made",
+   "anchor": "experiments/robustness.py:GOAL_RULES",
+   "used_by": [
+    "E25"
+   ],
+   "disposition": "取值域与被委托令牌范围无交集，「0 条落在范围内」是构造结果而非覆盖信息"
+  },
+  {
+   "id": "rtt",
+   "what": "网络往返时间",
+   "status": "external",
+   "anchor": "data/measurement_rtt.json（冻结，含时间戳与轮间极差）← tools/measure_rtt.py",
+   "used_by": [
+    "E24"
+   ],
+   "disposition": "文档只可引用冻结产物；run_all 当次数值不得写进文档"
+  },
+  {
+   "id": "compliance_model",
+   "what": "下游顺从概率模型（独立伯努利）",
+   "status": "assumption",
+   "anchor": "experiments/robustness.py:e18_compliance",
+   "used_by": [
+    "E18"
+   ],
+   "disposition": "该假设未被任何数据支持；解析值与经验值同源于该假设，不构成互证"
+  },
+  {
+   "id": "drift_detector",
+   "what": "漂移检测器（确定性统计代理）",
+   "status": "self_made",
+   "anchor": "src/runtime.py:DriftDetector",
+   "used_by": [
+    "E6",
+    "E22"
+   ],
+   "disposition": "非 LLM 检测器；FPR/ROC 不可外推，recall 依赖硬编码 +3.0 加项"
+  },
+  {
+   "id": "drift_threshold",
+   "what": "漂移阈值",
+   "status": "self_made",
+   "anchor": "src/runtime.py:DriftDetector.threshold",
+   "used_by": [
+    "E6",
+    "E22"
+   ],
+   "disposition": "E22 在同批数据上选点并报指标，无标定/测试分离"
+  },
+  {
+   "id": "topology",
+   "what": "委托链拓扑（5 跳线性 A→B→C→D→E）",
+   "status": "self_made",
+   "anchor": "experiments/run_all.py:CHAIN",
+   "used_by": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E11",
+    "E13",
+    "E18",
+    "E21",
+    "E24"
+   ],
+   "disposition": "E17 用 126 个图（含环/菱形/扇出）覆盖了性质断言，但性能与代价类实验仍只在该拓扑上"
+  },
+  {
+   "id": "root_scope",
+   "what": "协调者根授权内容与五档划分",
+   "status": "self_made",
+   "anchor": "experiments/run_all.py:ROOT_SCOPE；档位见 scope_experiments.py:root_levels",
+   "used_by": [
+    "E11",
+    "E12",
+    "E15",
+    "E16",
+    "E26"
+   ],
+   "disposition": "五档为自造划分；E15 的结论受 _filter_to_parent 钳制，属装置自证（见 claim map X 标记）"
+  },
+  {
+   "id": "sensitive_set",
+   "what": "敏感能力集合 SENSITIVE（6 个）",
+   "status": "self_made",
+   "anchor": "experiments/run_all.py:SENSITIVE",
+   "used_by": [
+    "E9",
+    "E11",
+    "E15",
+    "E26"
+   ],
+   "disposition": "E9 的「敏感能力不可达恒 0」由该集合从未被签发保证，是构造结果"
+  },
+  {
+   "id": "threat_model",
+   "what": "威胁模型与 TCB 假设",
+   "status": "assumption",
+   "anchor": "spec/spec.md §6、agent-security-v2.md §2",
+   "used_by": [
+    "全部"
+   ],
+   "disposition": "设计选择而非发现；TCB 之内不设防、confinement、串通并集均已列于 spec §6，论文须作为假设陈述"
+  },
+  {
+   "id": "probe_witness",
+   "what": "surplus 授权的探测资源（witness）",
+   "status": "mechanical",
+   "anchor": "src/patterns.py:witness",
+   "used_by": [
+    "E11",
+    "E12",
+    "E13",
+    "E15",
+    "E16",
+    "E26"
+   ]
+  },
+  {
+   "id": "replication",
+   "what": "独立复现（同模型、无上下文）",
+   "status": "assumption",
+   "anchor": "待执行：只给规格与外部数据，不给 src/ 与 experiments/",
+   "used_by": [
+    "P1",
+    "P5",
+    "粗化阶梯"
+   ],
+   "disposition": "同模型子 agent 共享概念盲点，因此只覆盖代码路径与框架独立，不覆盖概念独立；完整覆盖需异族模型"
+  },
+  {
+   "id": "differential",
+   "what": "差分测试（同模型、无上下文、黑盒调用两侧实现）",
+   "status": "external",
+   "anchor": "replication/differential/REPORT.md（10352 用例 + 69810 健全性三元组）",
+   "used_by": [
+    "P1",
+    "P2",
+    "§2.8",
+    "§3.2"
+   ],
+   "disposition": "同模型，不覆盖概念盲点；场景从规格条文构造、期望值写于独立的 oracle.py，两侧仅运行时调用"
+  },
+  {
+   "id": "fresh_reader",
+   "what": "全新读者（无本项目任何上下文）对新增规格条文的独立实现检验",
+   "status": "external",
+   "anchor": "replication/round2_fresh/REPORT.md",
+   "used_by": [
+    "§2.8",
+    "§2.3",
+    "§3.2",
+    "§5"
+   ],
+   "disposition": "只读规格；检验条文是否清楚到可被独立实现。发现 4 处仍有分歧 + 14 条缺口"
+  },
+  {
+   "id": "differential_r2",
+   "what": "第二轮差分测试（含随机操作序列族）",
+   "status": "external",
+   "anchor": "replication/differential/REPORT-r2.md（10913 用例 + 69810 健全性三元组）",
+   "used_by": [
+    "§2.3",
+    "§3.1",
+    "§3.2",
+    "§5"
+   ],
+   "disposition": "上一轮 6 项分歧全部归零；新增 4 类分歧全部定位并修复/钉死"
+  },
+  {
+   "id": "suite_replication",
+   "what": "四 suite 阶梯的独立复现（承重实验）",
+   "status": "external",
+   "anchor": "replication/differential/REPORT-r3-suites.md + all_suites.json",
+   "used_by": [
+    "E26",
+    "支柱 B 的排序结论"
+   ],
+   "disposition": "四 suite × 五级 × 三指标（surplus/危害/半径）与实现逐项一致；由 verify_fixes B28 作常驻比对，任何偏离即失败"
+  },
+  {
+   "id": "topology_derived",
+   "what": "由基准环境对象分解导出的委托拓扑",
+   "status": "external",
+   "anchor": "data/agentdojo_bench.json:suites[*].environments + tools[*].depends_on",
+   "used_by": [
+    "E28"
+   ],
+   "disposition": "取代此前 `i % HOPS` 的自造摊派；登记表中原 task_real 的自造部分由此得到外部替代"
+  },
+  {
+   "id": "adjacency_object",
+   "what": "相邻动词 = 操作同一环境对象的其它工具",
+   "status": "external",
+   "anchor": "data/agentdojo_bench.json:tools[*].depends_on",
+   "used_by": [
+    "E28"
+   ],
+   "disposition": "取代 param 规则；二者同为机械规则，差别在于是否锚定基准的语义模型"
+  },
+  {
+   "id": "L1_rule",
+   "what": "L1 的对象族放宽规则（末段换成 *）",
+   "status": "self_made",
+   "anchor": "experiments/substrate.py:_widen / derived_topology.py:_widen",
+   "used_by": [
+    "E11",
+    "E26",
+    "E28"
+   ],
+   "disposition": "**E29 证明该级在真实基底上无独立语义**：四个 suite 的资源串全为单段，`*` 与 `**` 匹配同一批资源，因此 L1 与 L2 在可观察层面完全等价。「四级粗化阶梯」实际只有三级。"
+  },
+  {
+   "id": "L3_direction",
+   "what": "L3「动词过泛」的方向（同对象全动词 vs 同动词它对象）",
+   "status": "self_made",
+   "anchor": "experiments/derived_topology.py:l3_adjacency",
+   "used_by": [
+    "E11",
+    "E26",
+    "E28",
+    "E30"
+   ],
+   "disposition": "**E30 证明方向选择改变结果**：travel 在同对象读法下 L3 危害为 0、在同动词读法下为 3；banking 反向（3→2）。故「L3 是最危险的一级」不可迁移。但**单调性 L1≤L2≤L3 在全部四种真实读法下成立**——稳健的是单调性，不是级间大小。"
+  },
+  {
+   "id": "coarsen_rules",
+   "what": "四级粗化所依赖的全部规则（单一实现）",
+   "status": "self_made",
+   "anchor": "experiments/rules.py",
+   "used_by": [
+    "E11",
+    "E26",
+    "E28",
+    "E29",
+    "E30"
+   ],
+   "disposition": "E28/E29/E30 证明这些规则**本身**能翻转结论，故收拢为单一实现（此前在 substrate.py 与 derived_topology.py 各有一份副本）。由 verify_fixes B31 常驻检查「无规则副本」。规则无外部真值可锚，因此每条都必须可枚举为若干可辩护读法。"
+  }
+ ],
+ "baselines": [
+  {
+   "id": "B0",
+   "what": "无任何强制",
+   "status": "independent",
+   "anchor": "src/runtime.py:PEP.handle（mode=B0 分支，不做范围检查）",
+   "note": "E1 中 B0 列的「得手」是定义而非发现——B0 不实现范围检查"
+  },
+  {
+   "id": "B1",
+   "what": "中心策略判定点",
+   "status": "shared_path",
+   "anchor": "src/runtime.py:CentralPDP.decide",
+   "shared_with": "src/runtime.py:_enforce（与 P 同一函数）",
+   "disposition": "「P 与 B1 安全等价」是同义反复，不得作为安全性证据；该对照只可用于成本与观测面对比"
+  },
+  {
+   "id": "B2",
+   "what": "提示层护栏（13 关键词正则）",
+   "status": "independent",
+   "anchor": "src/runtime.py:prompt_guard",
+   "disposition": "不共享范围判定路径，但与 P 的对照只反映「不读文本 vs 读文本」，不等于护栏类的表现；E25 的 0.978 只是这一个正则的成绩"
+  },
+  {
+   "id": "coarsen_levels",
+   "what": "粗化四级 L1–L4",
+   "status": "shared_path",
+   "anchor": "experiments/scope_experiments.py:coarsen / experiments/substrate.py:coarsen",
+   "shared_with": "同一函数的参数，非独立实现",
+   "disposition": "四级之间不是独立对照，只是同一变换的不同参数；E12 更只是其中 L1/L2 两级"
+  },
+  {
+   "id": "B3",
+   "what": "单 Agent + 任务最小工具集（无委托结构）",
+   "status": "independent",
+   "anchor": "experiments/baselines.py:task_minimal_scope（由任务 ground_truth 推出）",
+   "note": "**本项目引入的最重要对照**：它比本架构在协调者被攻破时更严。任务最小集是 oracle 推出的，实践中会过近似。"
+  },
+  {
+   "id": "B4",
+   "what": "多 Agent 静态配置，无令牌层",
+   "status": "independent",
+   "anchor": "src/runtime.py:PEP.handle（mode=B4）",
+   "note": "代表实践中最常见的做法；令牌层相对它的收益（下游可达 36–48 → 4）是真实的。"
+  },
+  {
+   "id": "E31",
+   "what": "真实串通（分时）：X 读 → 手工交接 → Y 外传",
+   "status": "independent",
+   "anchor": "experiments/baselines.py:e31_collusion_real",
+   "note": "取代 E9 的算术恒等式。结果：每一步均 ALLOW、越界步数 0、外泄达成——架构对串通零遏制；复合动作机制只挡单主体路径"
+  }
+ ],
+ "assertions": [
+  {
+   "id": "P1",
+   "where": "spec §5",
+   "statement": "执行的动作 ∈ 其令牌范围（原表述「令牌链交集」强于被检验的命题）",
+   "status": "measured",
+   "check": "experiments/topology_tests.py::exercise",
+   "note": "断言使用判定路径同一函数（装置自证）；下游锚定为 src/patterns.py:subsumes 的 4000 组随机健全性测试（该测试曾抓到真实缺陷）"
+  },
+  {
+   "id": "P2",
+   "where": "spec §5",
+   "statement": "旧 epoch 凭证不被接受",
+   "status": "measured",
+   "check": "experiments/run_all.py::a5_rollback",
+   "note": "凭证刷新语义修复后，`STALE_CREDENTIAL` 由不可达变为可达，并由 verify_fixes B14 做真正的可达性检查"
+  },
+  {
+   "id": "P3",
+   "where": "spec §5",
+   "statement": "撤销延迟 ≤ pull_interval + ttl（实测 101 tick）",
+   "status": "measured",
+   "check": "experiments/run_all.py::e20_partition_window",
+   "note": "摘要与 §6.3 必须与 E20 并列陈述，否则是在隐去分区下的退化"
+  },
+  {
+   "id": "P4",
+   "where": "spec §5",
+   "statement": "收据不可伪造/篡改",
+   "status": "measured",
+   "check": "experiments/run_all.py::a7_receipt_forgery"
+  },
+  {
+   "id": "P4-chain",
+   "where": "（已删除）",
+   "statement": "每个副作用有以接收方签名为终点的收据链",
+   "status": "unimplemented",
+   "reason": "已从规格删除，作为局限记录；实现收据链属设计变更而非缺陷修复"
+  },
+  {
+   "id": "P5",
+   "where": "spec §5",
+   "statement": "可达动作集 ⊆ 合法令牌范围并的传递闭包",
+   "status": "measured",
+   "check": "experiments/run_all.py::e2_overapprox"
+  },
+  {
+   "id": "P5-node",
+   "where": "spec §5",
+   "statement": "可达节点数有上界 —— 已证伪",
+   "status": "measured",
+   "check": "experiments/run_all.py::e10_fanout"
+  },
+  {
+   "id": "P5'",
+   "where": "spec §5",
+   "statement": "真实拓扑下该能力并集足够小",
+   "status": "unverified",
+   "reason": "经验命题，E26 显示其可迁移性仅对「最危险级别 = L4」成立，而该条本身信息量近零"
+  },
+  {
+   "id": "I1",
+   "where": "spec §7",
+   "statement": "令牌范围 ⊆ 根授权且逐级非增",
+   "status": "measured",
+   "check": "experiments/topology_tests.py::exercise"
+  },
+  {
+   "id": "I2",
+   "where": "spec §7",
+   "statement": "ALLOW ⇒ capability ∈ 令牌范围",
+   "status": "measured",
+   "check": "experiments/selfcheck.py::run"
+  },
+  {
+   "id": "I3",
+   "where": "spec §7",
+   "statement": "副作用数 == ALLOW 收据数（无旁路）",
+   "status": "measured",
+   "check": "experiments/selfcheck.py::run",
+   "note": "这是少数**非自证**的检查：它验证执行路径无旁路，不依赖判定谓词正确"
+  },
+  {
+   "id": "I4",
+   "where": "spec §7",
+   "statement": "max_seen_epoch 单调不减",
+   "status": "measured",
+   "check": "experiments/selfcheck.py::stale_credential_check",
+   "note": "原检查只把当前 grant 再喂一遍、恒真，无法证伪；现改为构造 v1→v2→回放 v1 的序列"
+  },
+  {
+   "id": "I5",
+   "where": "spec §7",
+   "statement": "收据数 == 请求数（无静默丢弃）",
+   "status": "measured",
+   "check": "experiments/selfcheck.py::run",
+   "note": "src/runtime.py 中的同名检查是恒真且无调用点，真实检查在自检脚本"
+  },
+  {
+   "id": "COMPOUND",
+   "where": "spec §2.12",
+   "statement": "复合动作原子性：ALLOW ⇒ required 每项均在范围内",
+   "status": "measured",
+   "check": "experiments/selfcheck.py::run"
+  },
+  {
+   "id": "MONOTONE-COARSEN",
+   "where": "spec §2.15",
+   "statement": "粗化只允许放宽，不得使任务成功率下降",
+   "status": "measured",
+   "check": "experiments/selfcheck.py::coarsening_monotone_check",
+   "note": "该检查上线后立即抓到自身泄漏全局能力宇宙（由 universe_restored 检查捕获），已在 substrate.ladder 源头修复"
+  },
+  {
+   "id": "DETECTOR-FEATURES",
+   "where": "spec §4",
+   "statement": "五个检测器特征",
+   "status": "unimplemented",
+   "reason": "deny_rate 与 cross_edge_fanout 在 src/ 中无实现；其余三个已实现"
+  },
+  {
+   "id": "DRIFT-METRICS",
+   "where": "spec §5",
+   "statement": "漂移检测的 Precision/Recall/FPR",
+   "status": "measured",
+   "check": "experiments/run_all.py::e6_drift",
+   "note": "代理检测器；recall 依赖硬编码 +3.0 加项，不得读作检测能力"
+  },
+  {
+   "id": "EXTERNAL-ANCHOR",
+   "where": "spec §2.16",
+   "statement": "凡能用外部真值替换的自造输入不得只报自造版",
+   "status": "unverified",
+   "reason": "元规则，不针对单一实验；其执行情况由本登记表逐项标注"
+  },
+  {
+   "id": "NO-SELF-WITNESS",
+   "where": "spec §2.16（装置自证禁令已并入）",
+   "statement": "装置自证禁令（基线不共路径、被测集合不被钳制、包络级不作证据、断言不调用被断言函数）",
+   "status": "unverified",
+   "reason": "元规则；违规项逐条记录在 paper/review_findings.md"
+  },
+  {
+   "id": "REPRODUCIBILITY",
+   "where": "spec §8",
+   "statement": "支柱 B 的主实验可从规格独立复现",
+   "status": "measured",
+   "check": "replication/REPORT.md::R2",
+   "note": "同模型无上下文复现完成：L0/L1/L2/L4 四级与 M 逐跳内容完全一致，R1 四项计数完全一致；L3 因规格未定义锚定规则而分歧（surplus 1 vs 8）。check 指向复现报告而非脚本，本校验只做存在性检查。"
+  },
+  {
+   "id": "SPEC-CODE-FIELDS",
+   "where": "spec §2.2–§2.6",
+   "statement": "规格声明的对象字段与 src/model.py 的 dataclass 一致",
+   "status": "measured",
+   "check": "tools/audit_register.py::spec_code_field_check",
+   "note": "上线即抓到 11 处不一致（其中 Link 缺 8 个字段、多 3 个）。根因是静默失效的字符串替换：替换目标与文件实际内容不匹配时 str.replace 什么都不做且不报错，于是〔已修复〕被写进报告而实际未发生。（差分测试后新增 B14–B17，覆盖可达性、空段规则、双向时效窗口、链根解析）（第二轮后新增 B18–B20：规则 6 的 reason_code 可达性、clock_skew 定义、反身性）"
+  },
+  {
+   "id": "P1-ORACLE",
+   "where": "spec §5 / §2.8",
+   "statement": "P1 的断言使用**独立重算**而非判定路径同一函数",
+   "status": "measured",
+   "check": "experiments/topology_tests.py::independent_allows",
+   "note": "原断言调用 scope_allows（与 _enforce 同一函数），属 spec §2.16 第 4 条所禁的装置自证。现改用正则翻译 + 候选枚举的独立口径，并加 4000 组抽样交叉验证（零分歧）"
+  }
+ ]
+}

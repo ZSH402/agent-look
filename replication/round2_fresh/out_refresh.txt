@@ -1,0 +1,11 @@
+R0 基线（未重签发）                                    spec_expect=OK                 ref=OK                 一致
+R1a 未刷新 B + 重签发前的旧根令牌                          spec_expect=OK                 ref=OK                 一致
+R1b 未刷新 B + 重签发后 A 派生的令牌                       spec_expect=None               ref=OK                 规格未定
+R2b 只刷新 B、A 未刷新时派生新令牌                          spec_expect=None               ref=EXC Deny:STALE_CREDENTIAL: 根授权 cred_epoch=1 < 已见 2 规格未定
+R2c 已刷新 B + 新根令牌                               spec_expect=OK                 ref=OK                 一致
+R2d 刷新后旧根令牌仍报 STALE（规格语义2）                     spec_expect=STALE_CREDENTIAL   ref=STALE_CREDENTIAL   一致
+R3a A 未刷新本级根令牌时派生                              spec_expect=None               ref=OK                 规格未定
+R3c A 刷新本级后派生的令牌                               spec_expect=None               ref=OK                 规格未定
+R4 刷新到新 epoch 后再刷回旧 epoch（P2 回滚抵抗）             spec_expect=new=True,old=False ref=new=True,old=False 一致
+
+SUMMARY: 0 不一致 / 4 规格未定 / 9

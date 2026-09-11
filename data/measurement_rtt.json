@@ -1,0 +1,37 @@
+{
+ "measured_ms": {
+  "loopback_tcp_ms": 0.285,
+  "loopback_http_nodelay_ms": 0.476,
+  "loopback_http_nagle_ms": 44.049,
+  "nagle_artifact_ms": 43.583,
+  "wan_api.deepseek.com_ms": 15.59,
+  "wan_pypi.org_ms": 77.5
+ },
+ "round_to_round_spread_ms": {
+  "loopback_tcp_ms": 0.02,
+  "loopback_http_nodelay_ms": 0.015,
+  "loopback_http_nagle_ms": 0.134,
+  "nagle_artifact_ms": 0.13,
+  "wan_api.deepseek.com_ms": 1.16,
+  "wan_pypi.org_ms": 6.67
+ },
+ "derived": {
+  "nagle_artifact_over_loopback_tcp": 152.9,
+  "loopback_tcp_over_modeled_1.5ms": 0.19,
+  "wan_min_ms": 15.59,
+  "wan_max_ms": 77.5,
+  "modeled_1.5ms_underestimates_wan_by": [
+   10.4,
+   51.7
+  ]
+ },
+ "provenance": {
+  "measured_at_utc": "2026-09-10T21:22:10+00:00",
+  "host": {
+   "platform": "Linux-6.19.14+kali-amd64-x86_64-with-glibc2.42",
+   "python": "3.14.6"
+  },
+  "method": "每项 3 轮 × 每轮 300 次回环 / 8 次公网 TCP 连接，取轮间中位数",
+  "warning": "实测值随运行与网络状况波动，轮间极差见 round_to_round_spread_ms。文档只可引用本文件，不得引用 run_all 当次产生的数值。"
+ }
+}
